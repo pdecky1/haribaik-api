@@ -82,6 +82,4 @@ app.get('/api', (req, res) => {
 });
 
 // Start server
-app.listen(port, () => {
-  console.log(`Server berjalan`);
-});
+module.exports = app;
