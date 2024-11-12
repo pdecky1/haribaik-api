@@ -4,13 +4,10 @@ const path = require('path');
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Load JSON data
 const data = require('./data.json');
 
-// Middleware untuk menangani permintaan API
 app.use(express.json());
 
-// Endpoint API untuk mendapatkan data berdasarkan macam, bulan, dan tahun
 app.get('/api', (req, res) => {
   const { macam, bulan, tahun } = req.query;
 
@@ -81,10 +78,7 @@ app.get('/api', (req, res) => {
   res.json(filteredData);
 });
 
-// Start server
 app.listen(port, () => {
   console.log(`Server berjalan`);
 });
 
-
-//test
